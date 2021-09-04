@@ -162,6 +162,9 @@
 
                  
     
+
+
+                
       
 
                  
@@ -171,17 +174,29 @@
     <p>Please fill in this form to create an account.</p>
     <hr>
 
+
+
+
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <input type="text" placeholder="Enter Email" id="myEmail" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                  <div class="result"></div>
+    <!-- <input type="text" placeholder="Enter Email" name="myemail" id="mail" required pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[a-z]{2,3}$">
+    <div class="result"></div> -->
+
+    <script src="./signup.js"></script> 
+
+    <br>
+    
 
     <label for="mob"><b>Mobile Number</b></label>
-    <input type="text" placeholder="Enter Mobile Number" name="mob" required>
+    <input type="text" placeholder="Enter Mobile Number" name="mob" id="mob" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
 
     <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
     
     <label>
       <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
@@ -192,9 +207,11 @@
     <div class="clearfix">
      
       <button type="submit" class="signupbtn" >Sign Up</button>
+      
+      
     </div>
   </div>
-  <script src="./signup.js"></script> 
+  
 </form>
                  
 

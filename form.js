@@ -31,7 +31,7 @@ function validate()
         else
         {
             alert("Invalid email format..!!");
-            return false;
+            return false
         }
         
     }

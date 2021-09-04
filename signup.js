@@ -1,37 +1,7 @@
-let mail= document.getElementById("email");
-let mobno= document.getElementById("mob");
-let pass= document.getElementById("psw");
-let passrep= document.getElementById("psw-repeat");
+var patt = /[a-z0-9._%+-]+@[a-z0-9.]+\.[a-z]{2,3}$/
 
+$('body').on('keyup change paste cut', '#myEmail', function() {
 
-function validate()
-{
-    let regexp=/^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/
-
-    if(mail.value.trim()=="")
-    {
-        alert("Email cannot be blank.!!")
-        return false
-    }
-    
-    else if(mobno.value.trim()=="")
-    {
-        alert("Mobile Number cannot be blank.!!")
-        return false
-    }
-
-    else
-    {   
-        if(regexp.test(mail.value))
-        {
-            
-        }
-        else
-        {
-            alert("Invalid email format..!!");
-            return false;
-        }
-        
-    }
-
-}
+	var res = patt.test($(this).val()) === true  ? 'Correct Email format.' : 'Invalid Email format. Please enter a valid Email address.';
+  $('.result').text(res)
+});
