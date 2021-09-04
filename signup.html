@@ -160,12 +160,6 @@
                  </div></div></nav>
 
 
-                 
-    
-
-
-                
-      
 
                  
 <form action="./index.html" style="border:1px solid #ccc">
@@ -190,7 +184,10 @@
     
 
     <label for="mob"><b>Mobile Number</b></label>
-    <input type="text" placeholder="Enter Mobile Number" name="mob" id="mob" required>
+    <input type="text" placeholder="Enter Mobile Number" id="myMob" name="mob" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}|[0-9]{3}.[0-9]{3}.[0-9]{4}|[0-9]{3}&nbsp[0-9]{3}&nbsp[0-9]{4}$" required>
+    <div class="result1"></div>
+    <script src="./signup.js"></script>
+    <br>
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
